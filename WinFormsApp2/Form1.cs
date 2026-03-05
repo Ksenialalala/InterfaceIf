@@ -14,6 +14,9 @@ namespace WinFormsApp2
     }
     public class Logic
     {
-
+        public static bool CanFit(double a, double b, double c, double d)
+        {
+            return (a <= c && b <= d) || (a <= d && b <= c);
+        }
     }
 }
