@@ -9,7 +9,12 @@ namespace WinFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var a = int.Parse(this.SideA.Text);
+            var b = int.Parse(this.SideB.Text);
+            var c = int.Parse(this.SideC.Text);
+            var d = int.Parse(this.SideD.Text);
 
+            MessageBox.Show(Logic.CanFit(a, b, c, d).ToString());
         }
     }
     public class Logic
