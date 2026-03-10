@@ -9,10 +9,18 @@ namespace WinFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var a = int.Parse(this.SideA.Text);
-            var b = int.Parse(this.SideB.Text);
-            var c = int.Parse(this.SideC.Text);
-            var d = int.Parse(this.SideD.Text);
+            int a, b, c, d;
+            try
+            {
+                a = int.Parse(this.SideA.Text);
+                b = int.Parse(this.SideB.Text);
+                c = int.Parse(this.SideC.Text);
+                d = int.Parse(this.SideD.Text);
+            }
+            catch (FormatException)
+            {
+                return;
+            }
 
             MessageBox.Show(Logic.CanFit(a, b, c, d).ToString());
         }
