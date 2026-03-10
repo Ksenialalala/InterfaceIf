@@ -22,7 +22,8 @@ namespace WinFormsApp2
                 return;
             }
 
-            MessageBox.Show(Logic.CanFit(a, b, c, d).ToString());
+            bool result = Logic.CanFit(a, b, c, d);
+            MessageBox.Show(result.ToString());
         }
     }
     public class Logic
